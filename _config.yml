@@ -30,7 +30,7 @@ twitter_username: @suhwan_ss
 github_username:  suhwantcha
 
 # Build settings
-theme: minima
+theme: null
 plugins:
   - jekyll-feed
 
