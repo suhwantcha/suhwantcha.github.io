@@ -1,48 +1,125 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tcha Suhwan - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suhwan Tcha - AI Master's Applicant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        header, section { padding: 20px; }
-        header { background: #333; color: #fff; }
-        nav a { color: white; margin-right: 15px; text-decoration: none; }
-        section { border-bottom: 1px solid #ccc; }
-        h1, h2 { color: #333; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #2d3748;
+            background: white;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+        .contact {
+            color: #4a5568;
+            font-size: 0.95rem;
+            margin-bottom: 3rem;
+        }
+        .contact a {
+            color: #3182ce;
+            text-decoration: none;
+        }
+        .contact a:hover { text-decoration: underline; }
+        .updated {
+            color: #a0aec0;
+            font-size: 0.85rem;
+            margin-bottom: 3rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin: 2.5rem 0 1rem 0;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        h2:first-child { margin-top: 0; }
+        p { margin-bottom: 1rem; color: #4a5568; }
+        ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; }
+        .highlight { font-weight: 600; color: #2b6cb0; }
+        .cv-link {
+            display: inline-block;
+            background: #3182ce;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        .cv-link:hover { background: #2b6cb0; }
+        @media (max-width: 768px) {
+            body { padding: 2rem 1rem; }
+            h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Tcha Suhwan</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#activities">Activities</a>
-            <a href="#cv">CV</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <section id="about">
-        <h2>About</h2>
-        <p>Hello! I'm Tcha Suhwan, a student interested in computer vision, artificial intelligence, and software development. I enjoy building meaningful software and exploring research topics related to AI.</p>
-    </section>
-    <section id="activities">
-        <h2>Activities</h2>
-        <ul>
-            <li>Participated in autonomous driving systems internship (July 2025 - Present)</li>
-            <li>Research projects in computer vision and machine learning</li>
-            <li>Member of Parrot AI Data Science Society</li>
-        </ul>
-    </section>
-    <section id="cv">
-        <h2>CV</h2>
-        <p><a href="cv.pdf" target="_blank">Download CV (PDF)</a></p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: suhwan@example.com</p>
-        <p>GitHub: <a href="https://github.com/suhwantcha" target="_blank">github.com/suhwantcha</a></p>
-    </section>
+    <h1>Suhwan Tcha</h1>
+    
+    <div class="contact">
+        <a href="mailto:dndoehk11@gmail.com">dndoehk11@gmail.com</a> | 
+        <a href="https://www.linkedin.com/in/suhwantcha/" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/suhwantcha" target="_blank">GitHub</a>
+    </div>
+    
+
+    <h2>About</h2>
+    <p>
+        I am a senior undergraduate student majoring in Computer Science, Artificial Intelligence, and Business. I’m passionate about machine learning, computer vision, and data-driven problem solving. 
+        My research focuses on <span class="highlight">multimodal AI and trustworthy vision-language models</span>, particularly:
+    </p>
+    <ul>
+        <li><strong>Computer Vision:</strong> Object detection, efficient architectures </li>
+        <li><strong>Multimodal AI:</strong> Affective computing, behavioral analysis from visual cues</li>
+        <li><strong>Trustworthy AI:</strong> Robust, interpretable, real-world deployable systems</li>
+    </ul>
+    <p>
+        Notable projects include <strong>YOLOv8 psychological analysis (F1: 0.71)</strong> and <strong>multimodal cat translator</strong>.
+        Currently a Teaching Assistant for <em>Understanding Artificial Intelligence</em>.
+    </p>
+
+    <h2>Experience</h2>
+    <ul>
+        <li><strong>Teaching Assistant</strong>, <em>Understanding Artificial Intelligence</em><br>
+            Sep–Dec 2025 | Sogang University<br>
+        <li><strong>Teaching Assistant</strong>, <em>Computer Architecture</em><br>
+            Mar–Jun 2025 | Sogang University<br>
+        <li><strong>Mentor</strong>, Parrot Data Science Club<br>
+            Mar–Jun 2025 | Sogang University<br>
+            <small>Guided 5 juniors in YOLOv8 & EfficientNet projects</small></li>
+        <li><strong>Runner-up</strong>, Sogang AI Data Analysis Runnerthon<br>
+            Jan–Feb 2025 | 2nd Place (15 teams)</li>
+    </ul>
+
+    <h2>Activities</h2>
+    <ul>
+        <li>Member, <strong>Parrot Data Science Club</strong> (Sep 2024 – Present)</li>
+        <li>Satellite Operation Squad Leader, <em>Republic of Korea Army</em> (2022–2023)</li>
+    </ul>
+
+    <h2>Education</h2>
+    <p>
+        <strong>B.S. Computer Science</strong> (Expected Aug 2026)<br>
+        Sogang University, Seoul, South Korea<br>
+    </p>
+
+    <a href="cv.pdf" class="cv-link" target="_blank">
+        Download Full CV
+    </a>
+
 </body>
 </html>
