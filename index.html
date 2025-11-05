@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suhwan Tcha - AI Master's Applicant</title>
+    <title>SUHWAN TCHA</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,7 +25,7 @@
         .contact {
             color: #4a5568;
             font-size: 0.95rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
         }
         .contact a {
             color: #3182ce;
@@ -37,6 +37,19 @@
             font-size: 0.85rem;
             margin-bottom: 3rem;
         }
+        nav {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        nav a {
+            color: #3182ce;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        nav a:hover { text-decoration: underline; }
         h2 {
             font-size: 1.4rem;
             font-weight: 600;
@@ -45,7 +58,7 @@
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 0.5rem;
         }
-        h2:first-child { margin-top: 0; }
+        h2:first-of-type { margin-top: 0; }
         p { margin-bottom: 1rem; color: #4a5568; }
         ul { padding-left: 1.5rem; margin-bottom: 1rem; }
         li { margin-bottom: 0.5rem; }
@@ -61,43 +74,54 @@
             margin-top: 1rem;
         }
         .cv-link:hover { background: #2b6cb0; }
+        .project-list { margin-top: 1rem; }
+        .project-list li { margin-bottom: 0.8rem; }
+        .project-list a { font-weight: 500; }
         @media (max-width: 768px) {
             body { padding: 2rem 1rem; }
             h1 { font-size: 2rem; }
+            nav a { display: block; margin: 0.5rem 0; }
         }
     </style>
 </head>
 <body>
-    <h1>Suhwan Tcha</h1>
+    <h1>SUHWAN TCHA</h1>
     
     <div class="contact">
-        <a href="mailto:dndoehk11@gmail.com">dndoehk11@gmail.com</a> | 
-        <a href="https://www.linkedin.com/in/suhwantcha/" target="_blank">LinkedIn</a> | 
+        <a href="mailto:dndoehk11@gmail.com">dndoehk11@gmail.com</a> |
+        <a href="https://www.linkedin.com/in/suhwantcha/" target="_blank">LinkedIn</a> |
         <a href="https://github.com/suhwantcha" target="_blank">GitHub</a>
     </div>
-    
 
-    <h2>About</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#activities">Activities</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+    </nav>
+
+
+    <h2 id="about">About</h2>
     <p>
-        I am a senior undergraduate student majoring in Computer Science, Artificial Intelligence, and Business. I’m passionate about machine learning, computer vision, and data-driven problem solving. 
+        I am a senior undergraduate student majoring in Computer Science, Artificial Intelligence, and Business. 
+        I’m passionate about machine learning, computer vision, and data-driven problem solving.
+    </p>
+    <p>
         My research focuses on <span class="highlight">multimodal AI and trustworthy vision-language models</span>, particularly:
     </p>
     <ul>
-        <li><strong>Computer Vision:</strong> Object detection, efficient architectures </li>
+        <li><strong>Computer Vision:</strong> Object detection, efficient architectures</li>
         <li><strong>Multimodal AI:</strong> Affective computing, behavioral analysis from visual cues</li>
         <li><strong>Trustworthy AI:</strong> Robust, interpretable, real-world deployable systems</li>
     </ul>
-    <p>
-        Notable projects include <strong>YOLOv8 psychological analysis (F1: 0.71)</strong> and <strong>multimodal cat translator</strong>.
-        Currently a Teaching Assistant for <em>Understanding Artificial Intelligence</em>.
-    </p>
 
-    <h2>Experience</h2>
+    <h2 id="experience">Experience</h2>
     <ul>
         <li><strong>Teaching Assistant</strong>, <em>Understanding Artificial Intelligence</em><br>
-            Sep–Dec 2025 | Sogang University<br>
+            Sep–Dec 2025 | Sogang University</li>
         <li><strong>Teaching Assistant</strong>, <em>Computer Architecture</em><br>
-            Mar–Jun 2025 | Sogang University<br>
+            Mar–Jun 2025 | Sogang University</li>
         <li><strong>Mentor</strong>, Parrot Data Science Club<br>
             Mar–Jun 2025 | Sogang University<br>
             <small>Guided 5 juniors in YOLOv8 & EfficientNet projects</small></li>
@@ -105,18 +129,29 @@
             Jan–Feb 2025 | 2nd Place (15 teams)</li>
     </ul>
 
-    <h2>Activities</h2>
+    <h2 id="activities">Activities</h2>
     <ul>
+        <li>Satellite Operation Squad Leader, <em>Republic of Korea Army</em> (Jan 2022 – Jul 2023)</li>
+        <li>2023 Military Personnel Software and AI Competency Enhancement Training Program (Jan 2023 – May 2023)</li>
         <li>Member, <strong>Parrot Data Science Club</strong> (Sep 2024 – Present)</li>
-        <li>Satellite Operation Squad Leader, <em>Republic of Korea Army</em> (2022–2023)</li>
+        <li><strong>Teaching Assistant</strong>, English & Math Academies<br>
+            Feb 2024 – Aug 2025 | Megastudy & Yesum Academy</li>
+        <li>Autonomous Taxi Design Project (Jul 2025 – Aug 2025)</li>
     </ul>
 
-    <h2>Education</h2>
-    <p>
-        <strong>B.S. Computer Science</strong> (Expected Aug 2026)<br>
-        Sogang University, Seoul, South Korea<br>
-    </p>
+    <h2 id="projects">Projects</h2>
+    <ul class="project-list">
+        <li><a href="https://github.com/suhwantcha/YOLO-Psycho-Analysis" target="_blank">YOLO-Psycho-Analysis</a> — Psychological analysis from house sketches </li>
+        <li><a href="https://github.com/suhwantcha/Cat-translator" target="_blank">Cat-Translator</a> — Multimodal meow → meme generator (Gemini + Stable Diffusion)</li>
+        <li><a href="https://github.com/suhwantcha/efficientnet-Image-classification" target="_blank">EfficientNet Dog & Cat</a> — 98.2% accuracy with CutMix</li>
+        <li><a href="https://github.com/suhwantcha/SSD-Object-Detection" target="_blank">SSD Object Detection</a> — mAP@0.5: 0.68 on video</li>
+        <li><a href="https://github.com/suhwantcha/Seoul-Housing-Price-Prediction" target="_blank">Seoul Real Estate</a> — XGBoost → MAE: ₩42M</li>
+        <li><a href="https://github.com/suhwantcha/CS-Agent" target="_blank">CS-Agent</a> — RAG-based CS agent (LangChain + GPT-4o)</li>
+        <li><a href="https://github.com/suhwantcha/OS-Pintos-Project" target="_blank">Pintos OS</a> — Kernel implementation (C)</li>
+        <li><a href="https://github.com/suhwantcha/System-Programming" target="_blank">System Programming Projects including Concurrent Stock Server</a></li>
+    </ul>
 
+    <h2 id="cv">CV</h2>
     <a href="cv.pdf" class="cv-link" target="_blank">
         Download Full CV
     </a>
