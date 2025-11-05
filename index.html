@@ -12,11 +12,10 @@
             line-height: 1.7;
             color: #2d3748;
             background: white;
-            padding: 4rem 2rem;
+            padding: 4rem 2rem 2rem;
             max-width: 800px;
             margin: 0 auto;
-            /* Nav Absolute positioning을 위해 relative 추가 */
-            position: relative; 
+            position: relative;
         }
         h1 {
             font-size: 2.5rem;
@@ -39,26 +38,29 @@
             font-size: 0.85rem;
             margin-bottom: 3rem;
         }
-        /* NAV 수정: 오른쪽 맨 위로 이동 */
+
+        /* NAVIGATION: 오른쪽 맨 위 고정 */
         nav {
             position: absolute;
-            top: 4rem; /* body padding top과 일치 */
-            right: 2rem; /* body padding right과 일치 */
-            margin-bottom: 0; 
-            padding-bottom: 0;
-            border-bottom: none; /* 하단 경계선 제거 */
-            text-align: right; /* 링크들을 오른쪽 정렬 */
+            top: 4rem;
+            right: 2rem;
+            text-align: right;
         }
         nav a {
             color: #3182ce;
             text-decoration: none;
-            margin-left: 1.5rem; /* 오른쪽으로 이동했으므로 margin-right 대신 margin-left 사용 */
-            margin-right: 0; /* 기존 margin-right 제거 */
+            margin-left: 1.5rem;
             font-weight: 500;
             font-size: 0.95rem;
-            display: inline-block; /* 링크들을 한 줄에 표시 */
         }
         nav a:hover { text-decoration: underline; }
+
+        /* 얇은 선 (네비 아래) */
+        .nav-divider {
+            border-top: 1px solid #e2e8f0;
+            margin: 3.5rem 0 2rem 0;
+        }
+
         h2 {
             font-size: 1.4rem;
             font-weight: 600;
@@ -86,24 +88,24 @@
         .project-list { margin-top: 1rem; }
         .project-list li { margin-bottom: 0.8rem; }
         .project-list a { font-weight: 500; }
+
         @media (max-width: 768px) {
-            body { padding: 2rem 1rem; }
+            body { padding: 2rem 1rem 1rem; }
             h1 { font-size: 2rem; }
-            /* 모바일에서 nav 위치 조정 */
             nav {
                 position: static;
                 text-align: left;
                 margin-top: 1rem;
-                padding-bottom: 0.5rem;
-                border-bottom: 1px solid #e2e8f0;
+                margin-bottom: 0.5rem;
             }
             nav a { display: block; margin: 0.5rem 0; margin-left: 0; }
+            .nav-divider { margin: 1rem 0 1.5rem 0; }
         }
     </style>
 </head>
 <body>
-    <h1>SUHWAN TCHA</h1>
-    
+
+    <!-- 네비게이션: 오른쪽 맨 위 -->
     <nav>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -111,7 +113,13 @@
         <a href="#projects">Projects</a>
         <a href="#cv">CV</a>
     </nav>
-    
+
+    <!-- 얇은 선 -->
+    <div class="nav-divider"></div>
+
+    <!-- 이름부터 시작 -->
+    <h1>SUHWAN TCHA</h1>
+   
     <div class="contact">
         <a href="mailto:dndoehk11@gmail.com">dndoehk11@gmail.com</a> |
         <a href="https://www.linkedin.com/in/suhwantcha/" target="_blank">LinkedIn</a> |
@@ -120,7 +128,7 @@
 
     <h2 id="about">About</h2>
     <p>
-        I am a senior undergraduate student majoring in Computer Science, Artificial Intelligence, and Business. 
+        I am a senior undergraduate student majoring in Computer Science, Artificial Intelligence, and Business.
         I’m passionate about machine learning, computer vision, and data-driven problem solving.
     </p>
     <p>
@@ -157,15 +165,15 @@
 
     <h2 id="projects">Projects</h2>
     <ul class="project-list">
-        <li><a href="https://github.com/suhwantcha/Convenience-Store-Chain-Database-System" target="_blank">Convenience Store Chain Database System</a></li>
-        <li><a href="https://github.com/suhwantcha/YOLO-Psycho-Analysis" target="_blank">YOLO-Psycho-Analysis</a> — Psychological analysis from house sketches </li>
+        <li><a href="https://github.com/suhwantcha/Convenience-Store-Chain-Database-System" target="_blank">Convenience Store Chain Database System</a> - Manage store and online purchases</li>
+        <li><a href="https://github.com/suhwantcha/YOLO-Psycho-Analysis" target="_blank">YOLO-Psycho-Analysis</a> — Psychological analysis from house sketches</li>
         <li><a href="https://github.com/suhwantcha/Cat-translator" target="_blank">Cat-Translator</a> — Multimodal meow → meme generator (Gemini + Stable Diffusion)</li>
         <li><a href="https://github.com/suhwantcha/efficientnet-Image-classification" target="_blank">EfficientNet Dog & Cat</a> — 98.2% accuracy with CutMix</li>
         <li><a href="https://github.com/suhwantcha/yolo-object-detection" target="_blank">YOLO Object Detection</a> — YOLOv5, YOLOv7, and YOLOv11</li>
         <li><a href="https://github.com/suhwantcha/Seoul-Housing-Price-Prediction" target="_blank">Seoul Real Estate</a> — XGBoost → MAE: ₩42M</li>
         <li><a href="https://github.com/suhwantcha/CS-Agent" target="_blank">CS-Agent</a> — RAG-based CS agent (LangChain + GPT-4o)</li>
         <li><a href="https://github.com/suhwantcha/OS-Pintos-Project" target="_blank">Pintos OS</a> — Kernel implementation (C)</li>
-        <li><a href="https://github.com/suhwantcha/System-Programming" target="_blank">System Programming Projects</a> - Including Concurrent Stock Server</a></li>
+        <li><a href="https://github.com/suhwantcha/System-Programming" target="_blank">System Programming Projects</a> — Including Concurrent Stock Server</li>
     </ul>
 
     <h2 id="cv">CV</h2>
