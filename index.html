@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SUHWAN TCHA - AI Researcher & Computer Vision Enthusiast.">
     <meta property="og:title" content="SUHWAN TCHA">
-    <meta property="og:description" content="Welcome to the personal website of Suhwan Tcha — a space to share my work, projects, and ideas.">
+    <meta property="og:description"
+        content="Welcome to the personal website of Suhwan Tcha — a space to share my work, projects, and ideas.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://suhwantcha.github.io/images/og_image.jpg">
     <title>SUHWAN TCHA - AI Researcher & Computer Vision</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
+
     <style>
         :root {
             --primary-color: #3182ce;
@@ -26,10 +30,10 @@
             --bg-secondary: #f7fafc;
             --bg-card: #ffffff;
             --border-color: #e2e8f0;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
-            --shadow-xl: 0 20px 40px rgba(0,0,0,0.2);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
         [data-theme="dark"] {
@@ -40,10 +44,10 @@
             --bg-secondary: #2d3748;
             --bg-card: #2d3748;
             --border-color: #4a5568;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.4);
-            --shadow-lg: 0 10px 25px rgba(0,0,0,0.5);
-            --shadow-xl: 0 20px 40px rgba(0,0,0,0.6);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
 
         * {
@@ -151,14 +155,19 @@
             position: absolute;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
             background-size: 50px 50px;
             animation: moveBackground 20s linear infinite;
         }
 
         @keyframes moveBackground {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(50px, 50px);
+            }
         }
 
         .hero-content {
@@ -174,6 +183,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -186,21 +196,29 @@
             border-radius: 50%;
             overflow: hidden;
             border: 5px solid white;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
             margin: 0 auto 2rem;
             animation: float 3s ease-in-out infinite;
             background: none;
         }
-        .profile-image img.profile-pic{
+
+        .profile-image img.profile-pic {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
-        
+
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .hero h1 {
@@ -245,7 +263,7 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
         }
 
         .btn-secondary {
@@ -254,7 +272,7 @@
         }
 
         .btn-secondary:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .social-links {
@@ -274,7 +292,7 @@
             transform: translateY(-5px);
         }
 
-        .social-links .email-text{
+        .social-links .email-text {
             font-size: 1rem;
             font-weight: 500;
             color: white;
@@ -519,35 +537,126 @@
             background: var(--bg-secondary);
         }
 
+        /* Featured Research grid — large cards, 1 column on mobile, up to 3 on desktop */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .featured-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            transition: all 0.35s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .featured-content {
+            padding: 1.75rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .featured-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .featured-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .featured-description {
+            color: var(--text-secondary);
+            font-size: 0.97rem;
+            line-height: 1.65;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        /* Other Projects divider */
+        .other-projects-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .other-projects-title::before,
+        .other-projects-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+        }
+
+        /* Other Projects grid — compact cards */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
         }
 
         .project-card {
             background: var(--bg-card);
-            border-radius: 16px;
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-sm);
             transition: all 0.3s ease;
             border: 1px solid var(--border-color);
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-xl);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
         }
 
         .project-image {
             width: 100%;
-            height: 200px;
+            height: 130px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 2.2rem;
             color: white;
         }
 
@@ -585,13 +694,55 @@
             gap: 0.5rem;
         }
 
-        .project-links a:hover{
+        /* Project badge chips */
+        .project-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.22rem 0.65rem;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .project-badge.badge-gold {
+            background: linear-gradient(90deg, #f6d365, #fda085);
+            color: #7a3f00;
+        }
+
+        .project-badge.badge-bronze {
+            background: linear-gradient(90deg, #cd7f32, #b87333);
+            color: #fff;
+        }
+
+        .project-badge.badge-trophy {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+        }
+
+        .project-badge.badge-pub {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+            border: 1.5px solid rgba(49, 130, 206, 0.4);
+        }
+
+        .project-links a:hover {
             color: var(--primary-color);
         }
-        .project-links a:hover{
+
+        .project-links a:hover {
             transform: scale(1.15);
         }
-        .project-links a:hover{
+
+        .project-links a:hover {
             transition: all 0.3s ease;
         }
 
@@ -602,6 +753,255 @@
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 500;
+        }
+
+        /* Publications Section */
+        #publications {
+            background: var(--bg-primary);
+        }
+
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            max-width: 860px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pub-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            padding: 1.75rem 2rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pub-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+            border-radius: 4px 0 0 4px;
+        }
+
+        .pub-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pub-venue-badge {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            min-width: 90px;
+        }
+
+        .pub-venue-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+        }
+
+        .pub-venue-name {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-align: center;
+            letter-spacing: 0.05em;
+        }
+
+        .pub-venue-year {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .pub-body {
+            flex: 1;
+        }
+
+        .pub-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(49, 130, 206, 0.12);
+            color: var(--primary-color);
+            border: 1px solid rgba(49, 130, 206, 0.3);
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+        }
+
+        .pub-status i {
+            font-size: 0.7rem;
+        }
+
+        .pub-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+            line-height: 1.4;
+        }
+
+        .pub-meta {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .pub-links {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .pub-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            border: 1.5px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .pub-link-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+        }
+
+        .pub-link-btn i {
+            font-size: 0.78rem;
+        }
+
+        /* Awards Section */
+        #awards {
+            background: var(--bg-secondary);
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .award-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            padding: 2rem 1.75rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .award-card.gold::after {
+            background: linear-gradient(90deg, #f6d365, #fda085);
+        }
+
+        .award-card.bronze::after {
+            background: linear-gradient(90deg, #cd7f32, #b87333);
+        }
+
+        .award-card.special::after {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .award-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .award-medal {
+            font-size: 3rem;
+            margin-bottom: 0.75rem;
+            display: block;
+            line-height: 1;
+        }
+
+        .award-rank {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .award-card.gold .award-rank {
+            color: #d4941a;
+        }
+
+        .award-card.bronze .award-rank {
+            color: #a0522d;
+        }
+
+        .award-card.special .award-rank {
+            color: var(--primary-color);
+        }
+
+        .award-competition {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .award-year {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .award-project {
+            display: inline-block;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
         }
 
         /* Contact Section */
@@ -829,6 +1229,7 @@
         }
     </style>
 </head>
+
 <body>
     <nav id="navbar">
         <div class="nav-container">
@@ -838,6 +1239,7 @@
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
+                <a href="#publications">Publications</a>
                 <a href="#contact">Contact</a>
                 <a href="cv.pdf" target="_blank">CV</a>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
@@ -846,7 +1248,7 @@
             </div>
         </div>
     </nav>
-    
+
     <section class="hero">
         <div class="hero-content">
             <div class="profile-image">
@@ -859,9 +1261,12 @@
                 <a href="#contact" class="btn btn-secondary">Get in Touch</a>
             </div>
             <div class="social-links">
-                <a href="mailto:dndoehrk11@gmail.com" aria-label="Email" style="display: flex; align-items: center;"><i class="fas fa-envelope"></i> <span class="email-text">dndoehrk11@gmail.com</span></a>
-                <a href="https://www.linkedin.com/in/suhwantcha/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/suhwantcha" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:dndoehrk11@gmail.com" aria-label="Email" style="display: flex; align-items: center;"><i
+                        class="fas fa-envelope"></i> <span class="email-text">dndoehrk11@gmail.com</span></a>
+                <a href="https://www.linkedin.com/in/suhwantcha/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/suhwantcha" target="_blank" rel="noopener" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
             </div>
         </div>
     </section>
@@ -870,11 +1275,14 @@
         <h2 class="section-title fade-in">About Me</h2>
         <div class="about-content fade-in">
             <p>
-                I am a senior undergraduate student majoring in <span class="highlight">Computer Science</span> at Sogang University.
+                I am a senior undergraduate student majoring in <span class="highlight">Computer Science</span> at
+                Sogang University.
                 I'm passionate about machine learning, computer vision, and data-driven problem solving.
             </p>
             <p>
-                My research focuses on developing <span class="highlight">human-like and trustworthy Artificial Intelligence</span> through the integration of computer vision, multimodal modeling, and data-driven problem solving.
+                My research focuses on developing <span class="highlight">human-like and trustworthy Artificial
+                    Intelligence</span> through the integration of computer vision, multimodal modeling, and data-driven
+                problem solving.
             </p>
         </div>
         <div class="research-areas fade-in">
@@ -966,7 +1374,8 @@
                     <div class="timeline-title">Teaching Assistant</div>
                     <div class="timeline-subtitle">Basic Artificial Intelligence Programming, Sogang University</div>
                     <div class="timeline-description">
-                        Supported Python programming coursework by handling Q&A, grading assignments, and managing attendance.
+                        Supported Python programming coursework by handling Q&A, grading assignments, and managing
+                        attendance.
                     </div>
                 </div>
             </div>
@@ -977,7 +1386,8 @@
                     <div class="timeline-title">Teaching Assistant</div>
                     <div class="timeline-subtitle">Understanding Artificial Intelligence, Sogang University</div>
                     <div class="timeline-description">
-                        Supported an Introduction to Artificial Intelligence course for 50+ students, and conducted PyTorch-based labs on deep learning architectures including CNNs and Transformers.
+                        Supported an Introduction to Artificial Intelligence course for 50+ students, and conducted
+                        PyTorch-based labs on deep learning architectures including CNNs and Transformers.
                     </div>
                 </div>
             </div>
@@ -988,7 +1398,8 @@
                     <div class="timeline-title">Teaching Assistant</div>
                     <div class="timeline-subtitle">Computer Architecture, Sogang University</div>
                     <div class="timeline-description">
-                        Supported course delivery and assisted 40+ students in understanding computer systems fundamentals.
+                        Supported course delivery and assisted 40+ students in understanding computer systems
+                        fundamentals.
                     </div>
                 </div>
             </div>
@@ -999,7 +1410,8 @@
                     <div class="timeline-title">Member & Mentor</div>
                     <div class="timeline-subtitle">Parrot Data Science Club, Sogang University</div>
                     <div class="timeline-description">
-                        Mentored junior members in data analysis and CNN-based computer vision projects, and organized internal ML competitions.
+                        Mentored junior members in data analysis and CNN-based computer vision projects, and organized
+                        internal ML competitions.
                     </div>
                 </div>
             </div>
@@ -1010,7 +1422,8 @@
                     <div class="timeline-title">Satellite Operation Squad Leader</div>
                     <div class="timeline-subtitle">Republic of Korea Army</div>
                     <div class="timeline-description">
-                        Led a team of 7 members, overseeing maintenance, inspection, and operation of satellite equipment to ensure uninterrupted communication services.
+                        Led a team of 7 members, overseeing maintenance, inspection, and operation of satellite
+                        equipment to ensure uninterrupted communication services.
                     </div>
                 </div>
             </div>
@@ -1019,74 +1432,111 @@
 
     <section id="projects">
         <h2 class="section-title fade-in">Featured Projects</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card fade-in">
-                <div class="project-image"><i class="fas fa-comments"></i></div>
-                <div class="project-content">
-                    <h3 class="project-title">
-                        <a href="https://github.com/suhwantcha/CS-Agent" target="_blank" rel="noopener">
-                            CS-Agent
-                        </a>
-                    </h3>
-                    <p class="project-description">
-                        RAG-based, AI-powered CRM manager using GCP and GPT-4o.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">RAG</span>
-                        <span class="tag">GPT-4o</span>
-                        <span class="tag">GCP</span>
-                    </div>
-                    <div class="project-links" style="margin-top: 1rem;">
-                        <a href="https://github.com/suhwantcha/CS-Agent" target="_blank" rel="noopener" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
-                            <i class="fab fa-github" style="font-size: 1.3rem;"></i> View on GitHub <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="project-card fade-in">
-                <div class="project-image"><i class="fas fa-video"></i></div>
-                <div class="project-content">
-                    <h3 class="project-title">
-                        <a href="https://github.com/sogang-v2a/v2a_inspect" target="_blank" rel="noopener">
-                            Multi-Track Video-to-Audio
-                        </a>
+        <!-- Featured Research -->
+        <div class="featured-grid">
+
+            <div class="featured-card fade-in">
+                <div class="featured-image"><i class="fas fa-video"></i></div>
+                <div class="featured-content">
+                    <h3 class="featured-title">
+                        <a href="https://github.com/sogang-v2a/v2a_inspect" target="_blank" rel="noopener">Multi-Track Video-to-Audio</a>
                     </h3>
-                    <p class="project-description">
-                        Hierarchical video analysis pipeline using VLMs to generate multi-track audio metadata.
+                    <div class="project-badges">
+                        <span class="project-badge badge-gold">🥇 Gold Prize</span>
+                        <span class="project-badge badge-pub">📄 KCC 2026</span>
+                    </div>
+                    <p class="featured-description">
+                        Hierarchical video analysis pipeline using VLMs to generate structured multi-track audio metadata. Analyzes scene, object, and event context through a multi-stage VLM prompting strategy.
                     </p>
-                    <div class="project-tags">
+                    <div class="project-tags" style="margin-bottom: 1rem;">
                         <span class="tag">VLMs</span>
                         <span class="tag">Multimodal</span>
                         <span class="tag">Video Analysis</span>
                     </div>
-                    <div class="project-links" style="margin-top: 1rem;">
-                        <a href="https://github.com/sogang-v2a/v2a_inspect" target="_blank" rel="noopener" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
+                    <div class="project-links">
+                        <a href="https://github.com/sogang-v2a/v2a_inspect" target="_blank" rel="noopener"
+                            style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
                             <i class="fab fa-github" style="font-size: 1.3rem;"></i> View on GitHub <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card fade-in">
-                <div class="project-image"><i class="fas fa-x-ray"></i></div>
-                <div class="project-content">
-                    <h3 class="project-title">
-                        <a href="https://github.com/sogang-cxr-cad/CXR-CAD" target="_blank" rel="noopener">
-                            CXR-CAD
-                        </a>
+            <div class="featured-card fade-in">
+                <div class="featured-image"><i class="fas fa-x-ray"></i></div>
+                <div class="featured-content">
+                    <h3 class="featured-title">
+                        <a href="https://github.com/sogang-cxr-cad/CXR-CAD" target="_blank" rel="noopener">CXR-CAD</a>
                     </h3>
-                    <p class="project-description">
-                        Multi-label thoracic disease diagnosis system using deep learning and Grad-CAM.
+                    <div class="project-badges">
+                        <span class="project-badge badge-bronze">🥉 Encouragement Prize</span>
+                        <span class="project-badge badge-pub">📄 KCC 2026</span>
+                    </div>
+                    <p class="featured-description">
+                        Multi-label thoracic disease diagnosis system for clinical deployment-readiness evaluation. Uses deep learning with Grad-CAM visualization and a three-dimension reliability cross-checking framework.
                     </p>
-                    <div class="project-tags">
+                    <div class="project-tags" style="margin-bottom: 1rem;">
                         <span class="tag">Deep Learning</span>
                         <span class="tag">Grad-CAM</span>
                         <span class="tag">Medical AI</span>
                     </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sogang-cxr-cad/CXR-CAD" target="_blank" rel="noopener"
+                            style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
+                            <i class="fab fa-github" style="font-size: 1.3rem;"></i> View on GitHub <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-card fade-in">
+                <div class="featured-image"><i class="fas fa-comments"></i></div>
+                <div class="featured-content">
+                    <h3 class="featured-title">
+                        <a href="https://github.com/suhwantcha/CS-Agent" target="_blank" rel="noopener">CS-Agent</a>
+                    </h3>
+                    <p class="featured-description">
+                        RAG-based, AI-powered CRM manager using GCP and GPT-4o. Handles customer Q&amp;A retrieval, conversation history, and automated response generation at scale.
+                    </p>
+                    <div class="project-tags" style="margin-bottom: 1rem;">
+                        <span class="tag">RAG</span>
+                        <span class="tag">GPT-4o</span>
+                        <span class="tag">GCP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/suhwantcha/CS-Agent" target="_blank" rel="noopener"
+                            style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
+                            <i class="fab fa-github" style="font-size: 1.3rem;"></i> View on GitHub <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Other Projects -->
+        <p class="other-projects-title fade-in">Other Projects</p>
+        <div class="projects-grid">
+
+            <div class="project-card fade-in">
+                <div class="project-image"><i class="fas fa-plane-departure"></i></div>
+                <div class="project-content">
+                    <h3 class="project-title">
+                        <a href="https://github.com/suhwantcha/Flight-Delay-Prediction" target="_blank" rel="noopener">Flight Delay Prediction</a>
+                    </h3>
+                    <div class="project-badges">
+                        <span class="project-badge badge-trophy">🏆 Excellence Award</span>
+                    </div>
+                    <p class="project-description">US domestic flight arrival delay prediction using XGBoost + LightGBM ensemble with F1-score optimization.</p>
+                    <div class="project-tags">
+                        <span class="tag">XGBoost</span>
+                        <span class="tag">LightGBM</span>
+                        <span class="tag">Feature Engineering</span>
+                    </div>
                     <div class="project-links" style="margin-top: 1rem;">
-                        <a href="https://github.com/sogang-cxr-cad/CXR-CAD" target="_blank" rel="noopener" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
+                        <a href="https://github.com/suhwantcha/Flight-Delay-Prediction" target="_blank" rel="noopener"
+                            style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
                             <i class="fab fa-github" style="font-size: 1.3rem;"></i> View on GitHub <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
                         </a>
                     </div>
@@ -1097,20 +1547,17 @@
                 <div class="project-image"><i class="fas fa-brain"></i></div>
                 <div class="project-content">
                     <h3 class="project-title">
-                        <a href="https://github.com/suhwantcha/YOLO-Psycho-Analysis" target="_blank" rel="noopener">
-                            YOLO-Psycho-Analysis
-                        </a>
+                        <a href="https://github.com/suhwantcha/YOLO-Psycho-Analysis" target="_blank" rel="noopener">YOLO-Psycho-Analysis</a>
                     </h3>
-                    <p class="project-description">
-                        Psychological analysis from house sketches using YOLO object detection algorithms.
-                    </p>
+                    <p class="project-description">Psychological analysis from house sketches using YOLO object detection algorithms.</p>
                     <div class="project-tags">
                         <span class="tag">YOLO</span>
                         <span class="tag">Psychology</span>
                         <span class="tag">Computer Vision</span>
                     </div>
                     <div class="project-links" style="margin-top: 1rem;">
-                        <a href="https://github.com/suhwantcha/YOLO-Psycho-Analysis" target="_blank" rel="noopener" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
+                        <a href="https://github.com/suhwantcha/YOLO-Psycho-Analysis" target="_blank" rel="noopener"
+                            style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
                             <i class="fab fa-github" style="font-size: 1.3rem;"></i> View on GitHub <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
                         </a>
                     </div>
@@ -1121,44 +1568,17 @@
                 <div class="project-image"><i class="fas fa-dog"></i></div>
                 <div class="project-content">
                     <h3 class="project-title">
-                        <a href="https://github.com/suhwantcha/efficientnet-Image-classification" target="_blank" rel="noopener">
-                            EfficientNet Dog & Cat
-                        </a>
+                        <a href="https://github.com/suhwantcha/efficientnet-Image-classification" target="_blank" rel="noopener">EfficientNet Dog &amp; Cat</a>
                     </h3>
-                    <p class="project-description">
-                        Image classification achieving 88.08% accuracy with CutMix augmentation technique.
-                    </p>
+                    <p class="project-description">Image classification achieving 88.08% accuracy with CutMix augmentation technique.</p>
                     <div class="project-tags">
                         <span class="tag">EfficientNet</span>
                         <span class="tag">CutMix</span>
                         <span class="tag">Classification</span>
                     </div>
                     <div class="project-links" style="margin-top: 1rem;">
-                        <a href="https://github.com/suhwantcha/efficientnet-Image-classification" target="_blank" rel="noopener" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
-                            <i class="fab fa-github" style="font-size: 1.3rem;"></i> View on GitHub <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-in">
-                <div class="project-image"><i class="fas fa-search"></i></div>
-                <div class="project-content">
-                    <h3 class="project-title">
-                        <a href="https://github.com/suhwantcha/yolo-object-detection" target="_blank" rel="noopener">
-                            YOLO Object Detection
-                        </a>
-                    </h3>
-                    <p class="project-description">
-                        Implementation and comparison of YOLOv5, YOLOv7, and YOLOv11 models.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">YOLOv5</span>
-                        <span class="tag">YOLOv7</span>
-                        <span class="tag">YOLOv11</span>
-                    </div>
-                    <div class="project-links" style="margin-top: 1rem;">
-                        <a href="https://github.com/suhwantcha/yolo-object-detection" target="_blank" rel="noopener" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
+                        <a href="https://github.com/suhwantcha/efficientnet-Image-classification" target="_blank" rel="noopener"
+                            style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
                             <i class="fab fa-github" style="font-size: 1.3rem;"></i> View on GitHub <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
                         </a>
                     </div>
@@ -1169,20 +1589,17 @@
                 <div class="project-image"><i class="fas fa-microchip"></i></div>
                 <div class="project-content">
                     <h3 class="project-title">
-                        <a href="https://github.com/suhwantcha/OS-Pintos-Project" target="_blank" rel="noopener">
-                            Pintos OS
-                        </a>
+                        <a href="https://github.com/suhwantcha/OS-Pintos-Project" target="_blank" rel="noopener">Pintos OS</a>
                     </h3>
-                    <p class="project-description">
-                        Kernel implementation for educational operating system in C.
-                    </p>
+                    <p class="project-description">Kernel implementation for educational operating system in C.</p>
                     <div class="project-tags">
                         <span class="tag">C</span>
                         <span class="tag">OS</span>
                         <span class="tag">Kernel</span>
                     </div>
                     <div class="project-links" style="margin-top: 1rem;">
-                        <a href="https://github.com/suhwantcha/OS-Pintos-Project" target="_blank" rel="noopener" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
+                        <a href="https://github.com/suhwantcha/OS-Pintos-Project" target="_blank" rel="noopener"
+                            style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
                             <i class="fab fa-github" style="font-size: 1.3rem;"></i> View on GitHub <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
                         </a>
                     </div>
@@ -1193,20 +1610,17 @@
                 <div class="project-image"><i class="fas fa-database"></i></div>
                 <div class="project-content">
                     <h3 class="project-title">
-                        <a href="https://github.com/suhwantcha/Convenience-Store-Chain-Database-System" target="_blank" rel="noopener">
-                            Convenience Store DB
-                        </a>
+                        <a href="https://github.com/suhwantcha/Convenience-Store-Chain-Database-System" target="_blank" rel="noopener">Convenience Store DB</a>
                     </h3>
-                    <p class="project-description">
-                        Database management system for store and online purchases with CRUD operations.
-                    </p>
+                    <p class="project-description">Database management system for store and online purchases with CRUD operations.</p>
                     <div class="project-tags">
                         <span class="tag">SQL</span>
                         <span class="tag">Database</span>
                         <span class="tag">Backend</span>
                     </div>
                     <div class="project-links" style="margin-top: 1rem;">
-                        <a href="https://github.com/suhwantcha/Convenience-Store-Chain-Database-System" target="_blank" rel="noopener" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
+                        <a href="https://github.com/suhwantcha/Convenience-Store-Chain-Database-System" target="_blank" rel="noopener"
+                            style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
                             <i class="fab fa-github" style="font-size: 1.3rem;"></i> View on GitHub <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
                         </a>
                     </div>
@@ -1217,20 +1631,17 @@
                 <div class="project-image"><i class="fas fa-server"></i></div>
                 <div class="project-content">
                     <h3 class="project-title">
-                        <a href="https://github.com/suhwantcha/System-Programming" target="_blank" rel="noopener">
-                            System Programming
-                        </a>
+                        <a href="https://github.com/suhwantcha/System-Programming" target="_blank" rel="noopener">System Programming</a>
                     </h3>
-                    <p class="project-description">
-                        Collection of system-level projects including concurrent stock server implementation.
-                    </p>
+                    <p class="project-description">Collection of system-level projects including concurrent stock server implementation.</p>
                     <div class="project-tags">
                         <span class="tag">C</span>
                         <span class="tag">Concurrency</span>
                         <span class="tag">Systems</span>
                     </div>
                     <div class="project-links" style="margin-top: 1rem;">
-                        <a href="https://github.com/suhwantcha/System-Programming" target="_blank" rel="noopener" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
+                        <a href="https://github.com/suhwantcha/System-Programming" target="_blank" rel="noopener"
+                            style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.3s ease;">
                             <i class="fab fa-github" style="font-size: 1.3rem;"></i> View on GitHub <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
                         </a>
                     </div>
@@ -1238,7 +1649,65 @@
             </div>
 
         </div>
+
+        <div class="view-more-container fade-in" style="text-align: center; margin-top: 3rem;">
+            <a href="https://github.com/suhwantcha?tab=repositories" target="_blank" rel="noopener" class="btn btn-primary" style="border-radius: 50px; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; font-weight: 500;">
+                <i class="fab fa-github" style="font-size: 1.2rem;"></i> View All Projects on GitHub
+            </a>
+        </div>
     </section>
+
+    <!-- Publications Section -->
+
+
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <h2 class="section-title fade-in">Publications</h2>
+        <div class="publications-list">
+
+            <div class="pub-card fade-in">
+                <div class="pub-venue-badge">
+                    <div class="pub-venue-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="pub-venue-name">KCC</div>
+                    <div class="pub-venue-year">2026</div>
+                </div>
+                <div class="pub-body">
+                    <span class="pub-status"><i class="fas fa-check-circle"></i> Conference Paper</span>
+                    <div class="pub-title">Automatic Multi-Track Sound Metadata Generation via Hierarchical Video
+                        Analysis Using Vision Language Models</div>
+                    <div class="pub-meta">Korea Computer Congress 2026</div>
+                    <div class="pub-links">
+                        <a href="publications/paper1.pdf" target="_blank" rel="noopener" class="pub-link-btn">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-card fade-in">
+                <div class="pub-venue-badge">
+                    <div class="pub-venue-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="pub-venue-name">KCC</div>
+                    <div class="pub-venue-year">2026</div>
+                </div>
+                <div class="pub-body">
+                    <span class="pub-status"><i class="fas fa-check-circle"></i> Conference Paper</span>
+                    <div class="pub-title">Clinical Deployment-Readiness Evaluation of Chest X-ray CAD Models: A
+                        Cross-Checking Framework Based on Three Reliability Dimensions</div>
+                    <div class="pub-meta">Korea Computer Congress 2026</div>
+                    <div class="pub-links">
+                        <a href="publications/paper2.pdf" target="_blank" rel="noopener" class="pub-link-btn">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
 
     <section id="contact">
         <h2 class="section-title fade-in">Get In Touch</h2>
@@ -1271,8 +1740,10 @@
         <div class="footer-content">
             <div class="footer-links">
                 <a href="mailto:dndoehrk11@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/suhwantcha/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/suhwantcha" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/suhwantcha/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/suhwantcha" target="_blank" rel="noopener" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
             </div>
             <p class="copyright">© 2026 SUHWAN TCHA. All rights reserved.</p>
         </div>
@@ -1296,7 +1767,7 @@
         themeToggle.addEventListener('click', () => {
             const currentTheme = html.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
+
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
@@ -1319,13 +1790,13 @@
 
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
+
             if (scrollTop > scrollThreshold) {
                 navbar.classList.add('visible');
             } else {
                 navbar.classList.remove('visible');
             }
-            
+
             lastScrollTop = scrollTop;
         });
 
@@ -1353,7 +1824,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    
+
                     // Trigger skill bar animations
                     if (entry.target.classList.contains('skill-card')) {
                         const progressBar = entry.target.querySelector('.skill-progress');
@@ -1390,34 +1861,27 @@
 
         // Contact form submission
         const contactForm = document.getElementById('contactForm');
-        
+
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             const formData = new FormData(contactForm);
             const data = Object.fromEntries(formData);
-            
+
             // Create mailto link
             const subject = encodeURIComponent(data.subject);
             const body = encodeURIComponent(
                 `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
             );
-            
+
             window.location.href = `mailto:dndoehrk11@gmail.com?subject=${subject}&body=${body}`;
-            
+
             // Show success message
             alert('Opening your email client...');
             contactForm.reset();
         });
 
-        // Add subtle parallax effect to hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero && scrolled < window.innerHeight) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
+
 
         // Typing effect for hero title (optional enhancement)
         const heroTitle = document.querySelector('.hero h1');
@@ -1425,7 +1889,7 @@
             const text = heroTitle.textContent;
             heroTitle.textContent = '';
             let index = 0;
-            
+
             function typeWriter() {
                 if (index < text.length) {
                     heroTitle.textContent += text.charAt(index);
@@ -1433,10 +1897,11 @@
                     setTimeout(typeWriter, 100);
                 }
             }
-            
+
             // Start typing effect after a short delay
             setTimeout(typeWriter, 500);
         }
     </script>
 </body>
+
 </html>
